@@ -214,6 +214,9 @@ label:hover {
         height: 10px;
     }
     .slides{
+        height: 50%;
+    }
+    .container-slider {
         height: 65%;
     }
 }
