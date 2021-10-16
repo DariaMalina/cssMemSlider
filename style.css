@@ -9,31 +9,40 @@ body {
 input {
     display: none;
 }
+p{
+    font-family: "Andale Mono",sans-serif;
+    font-size: 22px;
 
+}
 .container-slider {
-    width: 80%;
+    width: 100em;
+    height: 54em;
     margin: 2% auto;
     position: relative;
 }
 
 .container-slides {
-    width: 100%;
-    height: 800px;
+    width: 100em;
+    height: 54em;
     align-items: center;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, .5);
     background-color: rgba(255,255,255,0.6);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
 
 .slides {
-    height: 75%;
+    height: 40em;
     display: flex;
     opacity: 0;
     position: fixed;
-    width: 100rem;
+    width: 64em;
+
     z-index: 0;
-    transform: scale(1.5);
+    transform: translateX(400px);
     transition: transform ease-in-out .5s, opacity ease-in-out .5s;
     flex-direction: column;
     align-items: center;
@@ -41,7 +50,7 @@ input {
 }
 
 .slides img {
-    height: 90%;
+    height: 41em;
 }
 
 .controls {
@@ -49,6 +58,7 @@ input {
     justify-content: center;
     position: relative;
     top: -67px;
+    z-index: 5;
 }
 
 label {
@@ -107,5 +117,5 @@ label:hover {
 #slide5:checked ~ .container-slides > .slide5 {
     opacity: 2;
     z-index: 1;
-    transform: scale(1);
+    transform: translateX(50px);
 }
