@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    background-image:url("image/background.png") ;
+    overflow: hidden;
+}
+*{
+    box-sizing: border-box;
+}
+input {
+    display: none;
+}
+
+.container-slider {
+    width: 80%;
+    margin: 2% auto;
+    position: relative;
+}
+
+.container-slides {
+    width: 100%;
+    height: 800px;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
+    background-color: rgba(255,255,255,0.6);
+}
+
+.slides {
+    height: 75%;
+    display: flex;
+    opacity: 0;
+    position: fixed;
+    width: 100rem;
+    z-index: 0;
+    transform: scale(1.5);
+    transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+.slides img {
+    height: 90%;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -67px;
+}
+
+label {
+    cursor: pointer;
+    display: inline-block;
+    height: 8px;
+    margin: 25px 12px 0 16px;
+    position: relative;
+    width: 8px;
+    padding: 0;
+    border-radius: 50%;
+    transition: background ease-in-out .5s;
+}
+
+label:after {
+        border: 2px solid #014b12;
+    content: " ";
+    display: block;
+    height: 12px;
+    left: -4px;
+    position: relative;
+    top: -4px;
+    width: 12px;
+    padding: 0;
+    border-radius: 50%;
+}
+
+label:after:hover {
+    border: 2px solid #329d00;
+    border-radius: 50%;
+}
+
+label:hover {
+    background-color: #329d00;
+    transform: scale(1.5);
+    transition: 0.5s;
+    border-radius: 50%;
+}
+
+#slide1:checked ~ .controls label:nth-of-type(1),
+#slide2:checked ~ .controls label:nth-of-type(2),
+#slide3:checked ~ .controls label:nth-of-type(3),
+#slide4:checked ~ .controls label:nth-of-type(4),
+#slide5:checked ~ .controls label:nth-of-type(5) {
+    background-color: #085b00;
+    border: #085b00;
+    transform: scale(2);
+    transition: 0.5s;
+    border-radius: 50%;
+}
+
+#slide1:checked ~ .container-slides > .slide1,
+#slide2:checked ~ .container-slides > .slide2,
+#slide3:checked ~ .container-slides > .slide3,
+#slide4:checked ~ .container-slides > .slide4,
+#slide5:checked ~ .container-slides > .slide5 {
+    opacity: 2;
+    z-index: 1;
+    transform: scale(1);
+}
