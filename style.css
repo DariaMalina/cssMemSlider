@@ -14,7 +14,7 @@ input {
 
 .text-mem {
     font-family: "Andale Mono", sans-serif;
-    font-size: 2em;
+    font-size: 1.5em;
     opacity: 0;
     z-index: 0;
     transform: translateX(40em);
@@ -172,6 +172,7 @@ label:hover {
     .text-controls{
         margin: 0 3rem;
     }
+
 }
 @media (max-width: 767px) {
     .slides{
@@ -185,9 +186,7 @@ label:hover {
         flex-direction: column-reverse;
 
     }
-    .text-mem{
-        font-size: 1.6em;
-    }
+
     .container-slider{
         height: 90%;
     }
@@ -200,6 +199,9 @@ label:hover {
     .container-slides{
         height: 85%;
     }
+    label{
+        margin: 0.5em 0.5em 0;
+    }
 
 }
 @media (max-width: 480px){
@@ -207,13 +209,16 @@ label:hover {
       height: 75%;
   }
     .text-mem {
-        font-size: 1.4em;}
+        font-size: 0.8em;
+    }
     label,label:after {
         width: 0.6em;
         height: 0.6em;
         top: -0.1em;
         left: -0.1em;
+
     }
+
     .slides{
         height: 50%;
     }
@@ -221,18 +226,22 @@ label:hover {
         height: 70%;
     }
 }
-@media (max-width: 320px){
+
+@media (max-width: 320px) {
     .slides {
-        height: 30%;}
+        height: 30%;
+    }
+
     .container-slider {
         height: 50%;
     }
+
     .container-slides {
         height: 64%;
     }
+
     .text-mem {
-        font-size: 1em;}
-    img{
-        width: 100%;
+        font-size: 0.8em;
     }
+
 }
